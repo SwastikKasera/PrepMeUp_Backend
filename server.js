@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 
 app.use("/", AppRouter);
 
-mongoose.connect("mongodb://127.0.0.1:27017/prepmeup")
+mongoose.connect(process.env.MONGODB)
 .then(()=>{
   console.log("Mongodb Connected");
 })
